@@ -16,7 +16,7 @@ deploy:
     bucket: santed-s3 
   - provider: codedeploy
     access_key_id: ASIAJVWLSBQ5BGGK5FDA 
-    secret_access_key: *1
+    secret_access_key: L/zkY14mU882MbE5QUhldL91ph6NyNJCQ7fcArV9
     bucket: santed-s3 
     key: santed-latest.zip
     bundle_type: zip
