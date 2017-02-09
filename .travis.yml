@@ -4,3 +4,22 @@ php:
   - 5.4
   - hhvm
 script: phpunit Test.php
+
+deploy:
+  - provider: s3
+    access_key_id: ASIAJUAPDKLPNZEQJHNQ
+    secret_access_key: aeveG1XVq5IRZEfCAxUD9z6iYIwGYknT38Dbq6sy 
+      secure: 
+    skip_cleanup: true
+    on: &2
+     # repo: travis-ci/cat-party
+    bucket: santed-s3 
+  - provider: codedeploy
+    access_key_id: ASIAJUAPDKLPNZEQJHNQ
+    secret_access_key: *1
+    bucket: santed-s3 
+    key: santed-latest.zip
+    bundle_type: zip
+    application: santed-cicd-test
+    deployment_group: santed-depGroup-test 
+    on: *2
