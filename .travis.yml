@@ -7,15 +7,15 @@ script: phpunit Test.php
 
 deploy:
   - provider: s3
-    access_key_id: ASIAJUAPDKLPNZEQJHNQ
-    secret_access_key: aeveG1XVq5IRZEfCAxUD9z6iYIwGYknT38Dbq6sy 
-      secure: 
+    access_key_id: ASIAJVWLSBQ5BGGK5FDA 
+    secret_access_key: L/zkY14mU882MbE5QUhldL91ph6NyNJCQ7fcArV9  
+     # secure: 
     skip_cleanup: true
     on: &2
      # repo: travis-ci/cat-party
     bucket: santed-s3 
   - provider: codedeploy
-    access_key_id: ASIAJUAPDKLPNZEQJHNQ
+    access_key_id: ASIAJVWLSBQ5BGGK5FDA 
     secret_access_key: *1
     bucket: santed-s3 
     key: santed-latest.zip
