@@ -3,7 +3,7 @@ language: php
 #  - 5.5
 #  - 5.4
 #  - hhvm
-script: Test.php
+#script: Test.php
 
 deploy:
   - provider: s3
